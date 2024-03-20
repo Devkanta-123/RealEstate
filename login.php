@@ -388,7 +388,7 @@
             });
         });
         $(document).ready(function () {
-            $('#loginForm').submit(function (e) {
+            $('#loginForm').submit(function (e) {  //loginForm is the form id not button id 
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
@@ -396,7 +396,7 @@
                     data: $(this).serialize(),
                     success: function (response) {
                         if (response.trim() === 'success') {
-                            window.location.href = 'service.php';
+                            window.location.href = 'service.php'; //redirect to the landing page after login succes
                         } else {
                             // $('#message').html(response);
                             alert(response);

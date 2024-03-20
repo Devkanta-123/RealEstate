@@ -111,8 +111,16 @@
                                 </div>
 
 
+                                   <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                 <select class="form-control" id="hotelsize">
+                                     <option value="0">Select</option>
+                                     <option value="Medium">Medium</option>
+                                     <option value="Small">Small</option>
+                                 </select>
+                                </div> -->
+
+
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                                   
                                         <button type="button" id="registerButton"  class="btn btn-light btn-radius btn-brd grd1 btn-block">Register Now</button>
                                 </div>
                             </fieldset>
@@ -378,13 +386,22 @@
 
             $('#registerButton').click(function () {
                 debugger;
+
+               
                 var firstname = $('#firstname').val();
                 var lastname = $('#lastname').val();
                 var email = $('#email').val();
                 var phoneno = $('#phoneno').val();
                 var password = $('#password').val();
                 var address = $('#address').val();
+        
 
+                // //Handling validation errors
+                if(firstname == '' || lastname == ''|| phoneno ==''|| email == '' || password == '' || address == '')
+                {
+                     alert('Please fill All..');
+                     return false;
+                }
                 // Sending data to PHP script using AJAX
                 $.ajax({
                     url: 'registerbackend.php',

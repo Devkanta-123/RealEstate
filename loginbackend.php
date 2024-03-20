@@ -4,7 +4,7 @@ include 'db/db_connection.php';
 
 // Retrieve form data
 $firstname = $_POST['firstname'];
-$password = $_POST['password'];
+$password = $_POST['password']; 
 
 try {
     // Prepare SQL statement to check user credentials
