@@ -373,6 +373,7 @@
     <script src="js/map.js"></script>
     <script>
     
+    //Jquery start 
     $(document).ready(function () {
 
             $('#registerButton').click(function () {
