@@ -11,7 +11,7 @@ $address = $_POST['address'];
 
 try {
     // Prepare SQL statement to insert data
-    $stmt = $pdo->prepare("INSERT INTO users (firstname, lastname, email, phoneno, password,address) VALUES (:firstname, :lastname, :email, :phoneno, :password,:address)");
+    $stmt = $pdo->prepare("INSERT INTO user (firstname, lastname, email, phoneno, password,address) VALUES (:firstname, :lastname, :email, :phoneno, :password,:address)");
 
     // Bind parameters
     $stmt->bindParam(':firstname', $firstname);
